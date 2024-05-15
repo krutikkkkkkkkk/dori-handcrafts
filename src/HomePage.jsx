@@ -4,6 +4,8 @@ import Arrow from "./assets/arrow.svg";
 import Candidate from "./assets/Candidate.png";
 import Art from "./assets/Art and design.png";
 import Rating from "./assets/Rating.png";
+import star from "./assets/Star.svg"
+
   
 const features = [
   {
@@ -29,6 +31,28 @@ const features = [
     imageUrl: "https://i.ibb.co/GVrRTXS/Product.jpg",
     title: "Swings",
     description: "This is a description of feature 4.",
+  },
+];
+
+
+const testimonials = [
+  {
+    name: 'Deepa',
+    avatar: 'https://static.vecteezy.com/system/resources/thumbnails/007/209/020/small/close-up-shot-of-happy-dark-skinned-afro-american-woman-laughs-positively-being-in-good-mood-dressed-in-black-casual-clothes-isolated-on-grey-background-human-emotions-and-feeligs-concept-photo.jpg', 
+    text: 'Absolutely thrilled with my new macrame cushion! It has single-handedly transformed the ambiance of my home.',
+    rating: 5,
+  },
+  {
+    name: 'Dhruv',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiyTZELsW9Qag5l84uBtoes0z0pDCbCALeUAd-6HIDZA&s', 
+    text: 'Got the hang-bag from Dori for my girlfriend. It’s become her new favorite accessory, and she’s absolutely in love with it.',
+    rating: 5,
+  },
+  {
+    name: 'Krutik',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSJLd5w25w403fBGB6IpH-DVEZnQ4tglEKP5JP1k72g&s', 
+    text: 'I couldn’t be more thrilled with my decision. This swing has truly transformed my patio into a serene oasis.',
+    rating: 5,
   },
 ];
 
@@ -73,7 +97,7 @@ function HomePage() {
    
     
 <section
-  className="relative bg-cover bg-bottom bg-center h-screen flex items-center justify-center text-white"
+  className="relative bg-cover bg-bottom  h-screen flex items-center justify-center text-white"
   style={{
     backgroundImage: "url('https://i.ibb.co/JphgHVf/hero-bg-dori.jpg')",
   }}
@@ -264,8 +288,32 @@ function HomePage() {
 
     <section className="testimonials flex justify-center mx-auto h-[900px] bg-cover bg-bottom bg-no-repeat" style={{backgroundImage: "url('https://i.ibb.co/7nWhpb4/Frame-16.jpg')"}}>
       <div className="container">
-        <h2 className="text-4xl font-bold text-center text-primary mb-12 py-16">What our customers say about us?</h2>
-        <div className="flex flex-wrap gap-8">
+        <h2 className="text-5xl font-bold text-center text-primary mb-12 py-1">What our customers say about us?</h2>
+        <div className="flex mx-auto px-14 py-20">
+
+        <div className="flex flex-wrap justify-between space-x-10">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-none border border-1 border-primary text-primary py-4 rounded-2xl shadow-lg flex flex-col items-center flex-1  h-[440px]">
+              <div className="flex items-center justify-between space-x-4 mb-4 w-full px-4">
+              <h3 className="text-lg ">{testimonial.name}</h3>
+              <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-[1px] border-white object-cover" />
+                
+              </div>
+
+            <div className="testimonial-text  h-[60%] border-x-0 border-y-2 border-primary flex text-center justify-center items-center text-white bg-primary opacity-[58%]">
+            <p className="text-lg w-[80%]">{testimonial.text}</p>
+            </div>
+
+              <div className="flex space-x-1 justify-start py-6 w-full px-4">
+                {Array.from({ length: testimonial.rating }).map((_, i) => (
+                  <img key={i} src={star} alt="star" className="w-[38px] h-[38px]" />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+  
          
         </div>
       </div>
@@ -274,15 +322,15 @@ function HomePage() {
 
 
 <section className="contact mx-auto flex justify-center">
-<div className="conatiner bg-accent  text-center p-6 md:p-10">
+<div className="conatiner bg-accent  text-center px-6 py-12 md:p-10">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-6xl font-bold text-primary mb-4 leading-10">
+        <h2 className="text-4xl md:text-8xl font-bold text-primary mb-12 leading-12">
           Ready to get <br /> Sophisticated
         </h2>
      
         <div className="flex justify-center text-primary space-x-4 mt-4">
         
-          <button className="bg-accent border border-1 border-primary  py-2 px-6  text-start rounded-full item-bottom" style={{alignSelf: "end"}}>
+          <button className="bg-accent text-3xl border border-1 border-primary  py-4 px-6  text-start rounded-full item-bottom" style={{alignSelf: "end"}}>
             Shop
           </button>
 
@@ -290,9 +338,9 @@ function HomePage() {
           <input
           type="email"
           placeholder="Email"
-          className=" py-2 w-[100%] border-b-2 border-primary placeholder:text-primary bg-transparent mb-4 w-full"
+          className=" py-2 w-[100%] text-3xl border-b-2 border-primary placeholder:text-primary bg-transparent mb-8 w-full"
         />
-         <button className="bg-accent border border-1 border-primary  text-start px-6 py-2 rounded-full">
+         <button className="bg-accent text-3xl border border-1 border-primary  text-start px-6 py-4 rounded-full">
             Newsletter
           </button>
 
