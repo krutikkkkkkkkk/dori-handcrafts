@@ -72,69 +72,69 @@ function HomePage() {
     </header>
    
     
+<section
+  className="relative bg-cover bg-bottom bg-center h-screen flex items-center justify-center text-white"
+  style={{
+    backgroundImage: "url('https://i.ibb.co/JphgHVf/hero-bg-dori.jpg')",
+  }}
+>
+  <div className="relative text-center z-10 max-w-xl px-4 pb-8">
+    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 py-10">
+      Crafting Life’s <br />
+      Little Luxuries
+    </h1>
+    <a
+      href="#"
+      className="bg-primary px-8 py-3 rounded-full border border-white text-white font-semibold hover:bg-primary-dark my-10"
+    >
+      View More
+    </a>
+  </div>
+</section>
 
 
-    <section className="relative bg-cover bg-bottom bg-center h-screen flex items-center justify-center text-white"
-    style={{
-      backgroundImage: "url('https://i.ibb.co/JphgHVf/hero-bg-dori.jpg')",
-    }}
-  >
-    {/* <div className="absolute inset-0 bg-black opacity-100"></div> */}
-    <div className="relative text-center z-10 max-w-xl px-4 pb-8 ">
-      <h1 className="text-4xl lg:text-6xl font-bold mb-6 py-10">
-        Crafting Life’s <br />
-        Little Luxuries
-        </h1>
-      <a
-        href="#"
-        className="bg-primary px-8 py-3 rounded-full border border-white text-white font-semibold hover:bg-primary-dark my-10"
+
+
+
+    <section className="container mx-auto py-16 bg-accent">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Peek into our bestsellers!</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-4 md:px-8 lg:px-24">
+    {features.map((feature) => (
+      <div
+        key={feature.id}
+        className="bg-primary text-white rounded-xl shadow-lg overflow-hidden px-6 md:px-8 lg:px-12 pt-8 pb-6"
       >
-        View More
-      </a>
-    </div>
-  </section>
-
-
-
-  <section className="container mx-auto py-16 bg-accent">
-      <h2 className="text-4xl font-bold text-center text-primary mb-12">Peek into our bestsellers!</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-16">
-        {features.map((feature) => (
-          <div
-            key={feature.id}
-            className="bg-primary text-white rounded-xl shadow-lg overflow-hidden px-12 pt-8 pb-6"
-          >
-            <img
-              src={feature.imageUrl}
-              alt={feature.title}
-              className="w-full h-100 object-cover rounded-3xl border-2 border-white"
-            />
-            <div className="p-4">
-              <hr className="mb-4 border-white border-1" />
-              <div className="flex justify-between items-center py-2">
-              <h3 className="text-2xl font-semibold ">{feature.title}</h3>
-                <a
-                  href="#"
-                  className="bg-primary text-white px-2 rounded-lg hover:bg-primary-dark"
-                >
-                  <img  src={Arrow} alt="Arrow" style={{width: "40px"}} />
-                </a>
-              </div>
-            </div>
+        <img
+          src={feature.imageUrl}
+          alt={feature.title}
+          className="w-full h-96 md:h-80 lg:h-[477px] object-cover rounded-3xl border-2 border-white"
+        />
+        <div className="p-4">
+          <hr className="mb-4 border-white border-1" />
+          <div className="flex justify-between items-center py-2">
+            <h3 className="text-xl md:text-2xl font-semibold">{feature.title}</h3>
+            <a
+              href="#"
+              className="bg-primary text-white px-2 rounded-lg transform transition-transform duration-300 hover:rotate-45"
+            >
+              <img src={Arrow} alt="Arrow" style={{ width: "40px" }} />
+            </a>
           </div>
-        ))}
+        </div>
       </div>
-      
-      <div className="container flex justify-center">
-      <a
-        href="#"
-        className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark my-10"
-      >
-        View More
-      </a>
-      </div>
+    ))}
+  </div>
 
-    </section>
+  <div className="flex justify-center mt-10">
+    <a
+      href="#"
+      className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark"
+    >
+      View More
+    </a>
+  </div>
+</section>
+
 
    <section className="AboutUs mx-auto container py-20">
 
@@ -155,107 +155,93 @@ function HomePage() {
 
    </section>
 
-
-
-   <section className="aunty mx-auto"  >
-    <div className="container mx-auto flex  justify-center h-full bg-bottom bg-cover  px-16 grid-rows-2" style={{backgroundImage: "url('https://i.ibb.co/p1FmbG9/Women-Empowerment.jpg')"}}>
-      <div className="col w-1/2 mt-20">
-        <h6 className="text-3xl font-bold text-primary mb-12">Creating opportunities for rural women to <br />
-         handcraft India’s growth.</h6>
-        <p className="text-xl text-primary  w-10/12">
-        Your every purchase matters because their craft at Dori Handcrafts is no longer called a household but a way of fueling their livelihood. 
+<section className="aunty mx-auto">
+  <div
+    className="container mx-auto flex flex-col lg:flex-row justify-center h-full bg-bottom bg-cover px-4 md:px-8 lg:px-16 pt-16"
+    style={{ backgroundImage: "url('https://i.ibb.co/p1FmbG9/Women-Empowerment.jpg')" }}
+  >
+    <div className="col w-full lg:w-1/2 mt-10 lg:mt-20">
+      <h6 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-6 md:mb-8 lg:mb-12">
+        Creating opportunities for rural women to <br />
+        handcraft India’s growth.
+      </h6>
+      <p className="text-base md:text-lg lg:text-xl text-primary w-full md:w-10/12">
+        Your every purchase matters because their craft at Dori Handcrafts is no longer called a household but a way of fueling their livelihood.
         <br />
         <br />
-        Seeing our founder making macrame products as a hobby, to creating a memorable brand by empowering women artisans is a dream come true.      </p>
-
-
-      </div>
-      <div className="col h-full flex-1 w-full">
-        <img className="h-full w-full" src="https://i.ibb.co/dGX4xL1/Aunty.png" alt="Aunty" />
-      
-
-      </div>
-
+        Seeing our founder making macrame products as a hobby, to creating a memorable brand by empowering women artisans is a dream come true.
+      </p>
     </div>
-    
+    <div className="col flex-1 w-full mt-8 lg:mt-0 lg:ml-10">
+      <img className="h-full w-full object-cover rounded-xl" src="https://i.ibb.co/dGX4xL1/Aunty.png" alt="Aunty" />
+    </div>
+  </div>
+</section>
 
-   </section>
 
-   <section className="stats bg-primary px-10 py-14 flex justify-center">
-      <div className="container">
-        <div className="flex item-center justif flex-wrap gap-8 text-center">
-
-          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
-            <div className="grp flex space-x-8 item-center justify-center">
-              <img src={Rating} alt="Candidate" className="h-20" />
-              <p className="text-[26px] text-start leading-8">Happy <br /> Customers</p>
-            </div>
-            <h2 className="text-[3rem]  font-bol font-count">100+</h2>   
-          </div>
-             
-          
-          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
-            <div className="grp flex space-x-8 ">
-              <img src={Rating} alt="Candidate" className="h-20" />
-              <p className="text-[26px] text-start leading-8">Product <br /> Range</p>
-            </div>
-            <h2 className="text-[3rem]   font-bol font-count">100+</h2>   
-          </div>
-             
-          
-          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
-            <div className="grp flex space-x-8 ">
-              <img src={Rating} alt="Candidate" className="h-20" />
-              <p className="text-[26px] text-start leading-8">Women <br /> Employed</p>
-            </div>
-            <h2 className="text-[3rem]  font-bol font-count">100+</h2>   
-          </div>
-             
-
+<section className="stats bg-primary px-10 py-14 flex justify-center">
+  <div className="container">
+    <div className="flex items-center justify-center flex-wrap gap-8 text-center">
+      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
+        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
+          <img src={Rating} alt="Happy Customers" className="h-16 md:h-20" />
+          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Happy <br /> Customers</p>
         </div>
+        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
       </div>
-    </section>
+      
+      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
+        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
+          <img src={Rating} alt="Product Range" className="h-16 md:h-20" />
+          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Product <br /> Range</p>
+        </div>
+        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
+      </div>
+      
+      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
+        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
+          <img src={Rating} alt="Women Employed" className="h-16 md:h-20" />
+          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Women <br /> Employed</p>
+        </div>
+        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
+      </div>
+    </div>
+  </div>
+</section>
 
-   <section className="bestsellers">
-   <div className="container mx-auto py-16">
-      <h2 className="text-4xl font-bold text-center text-primary mb-12 py-16">Bestsellers</h2>
-      <div className=" border-t-2 border-b-2 border-primary my-10">
-        <div className="conatiner px-20">
-      <div className="flex flex-warp px-8 my-10 space-x-20">
-        {features.map((feature) => (
-          <div
-            key={feature.id}
-            className="bg-primary rounded-lg overflow-hidden text-white px-4 py-4 rounded-lg flex-1"
-          >
-            <img
-              src={feature.imageUrl}
-              alt={feature.title}
-              className="w-full h-48 object-cover rounded-xl"
-            />
-            <div className="px-4">
-              <hr className="my-4 border-white w-full" />
-              <div className="flex justify-between items-center py-2">
-              <h3 className="text-sm font-semibold ">{feature.title}</h3>
 
-              <a
-                  href="#"
-                  className="bg-primary text-white rounded-lg hover:bg-primary-dark"
-                >
-                  <img  src={Arrow} alt="Arrow" style={{width: "25px"}} />
-                </a>
-
-                {/* <a
-                  href="#"
-                  className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark"
-                >
-                  Learn More
-                </a> */}
+<section className="bestsellers">
+  <div className="container mx-auto py-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Bestsellers</h2>
+    <div className="border-t-2 border-b-2 border-primary my-10">
+      <div className="container px-4 md:px-10 lg:px-20">
+        <div className="flex flex-wrap justify-center gap-16 my-10">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="bg-primary rounded-lg overflow-hidden text-white p-4 md:p-6 flex-1 min-w-[250px] max-w-[350px]"
+            >
+              <img
+                src={feature.imageUrl}
+                alt={feature.title}
+                className="w-full h-48 object-cover rounded-xl"
+              />
+              <div className="px-2 md:px-4">
+                <hr className="my-4 border-white w-full" />
+                <div className="flex justify-between items-center py-2">
+                  <h3 className="text-sm md:text-base font-semibold">{feature.title}</h3>
+                  <a
+                    href="#"
+                    className="bg-primary text-white rounded-lg hover:bg-primary-dark"
+                  >
+                    <img src={Arrow} alt="Arrow" style={{ width: "25px" }} />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </div>
 
 
