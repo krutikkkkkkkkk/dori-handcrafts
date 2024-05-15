@@ -1,6 +1,9 @@
 import React from "react";
 import "./index.css";
 import Arrow from "./assets/arrow.svg";
+import Candidate from "./assets/Candidate.png";
+import Art from "./assets/Art and design.png";
+import Rating from "./assets/Rating.png";
   
 const features = [
   {
@@ -153,6 +156,7 @@ function HomePage() {
    </section>
 
 
+
    <section className="aunty mx-auto"  >
     <div className="container mx-auto flex  justify-center h-full bg-bottom bg-cover  px-16 grid-rows-2" style={{backgroundImage: "url('https://i.ibb.co/p1FmbG9/Women-Empowerment.jpg')"}}>
       <div className="col w-1/2 mt-20">
@@ -177,26 +181,61 @@ function HomePage() {
 
    </section>
 
+   <section className="stats bg-primary px-10 py-14 flex justify-center">
+      <div className="container">
+        <div className="flex item-center justif flex-wrap gap-8 text-center">
+
+          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
+            <div className="grp flex space-x-8 item-center justify-center">
+              <img src={Rating} alt="Candidate" className="h-20" />
+              <p className="text-[26px] text-start leading-8">Happy <br /> Customers</p>
+            </div>
+            <h2 className="text-[3rem]  font-bol font-count">100+</h2>   
+          </div>
+             
+          
+          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
+            <div className="grp flex space-x-8 ">
+              <img src={Rating} alt="Candidate" className="h-20" />
+              <p className="text-[26px] text-start leading-8">Product <br /> Range</p>
+            </div>
+            <h2 className="text-[3rem]   font-bol font-count">100+</h2>   
+          </div>
+             
+          
+          <div className="border-2 border-white text-white p-6 rounded-2xl flex p-4 justify-between item-center flex-1">
+            <div className="grp flex space-x-8 ">
+              <img src={Rating} alt="Candidate" className="h-20" />
+              <p className="text-[26px] text-start leading-8">Women <br /> Employed</p>
+            </div>
+            <h2 className="text-[3rem]  font-bol font-count">100+</h2>   
+          </div>
+             
+
+        </div>
+      </div>
+    </section>
+
    <section className="bestsellers">
    <div className="container mx-auto py-16">
       <h2 className="text-4xl font-bold text-center text-primary mb-12 py-16">Bestsellers</h2>
       <div className=" border-t-2 border-b-2 border-primary my-10">
-        <div className="conatiner px-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 my-10">
+        <div className="conatiner px-20">
+      <div className="flex flex-warp px-8 my-10 space-x-20">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="bg-primary rounded-lg overflow-hidden text-white px-4 py-4 rounded-lg"
+            className="bg-primary rounded-lg overflow-hidden text-white px-4 py-4 rounded-lg flex-1"
           >
             <img
               src={feature.imageUrl}
               alt={feature.title}
               className="w-full h-48 object-cover rounded-xl"
             />
-            <div className="p-6">
-              <hr className="mb-4 border-white w-full" />
+            <div className="px-4">
+              <hr className="my-4 border-white w-full" />
               <div className="flex justify-between items-center py-2">
-              <h3 className="text-sm font-semibold mb-4">{feature.title}</h3>
+              <h3 className="text-sm font-semibold ">{feature.title}</h3>
 
               <a
                   href="#"
@@ -219,24 +258,6 @@ function HomePage() {
     </div>
     </div>
 
-    <section className="stats">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-primary text-white p-8 rounded-lg">
-            <h2 className="text-3xl font-bold">100+</h2>
-            <p className="text-lg">Products</p>
-          </div>
-          <div className="bg-primary text-white p-8 rounded-lg">
-            <h2 className="text-3xl font-bold">100+</h2>
-            <p className="text-lg">Happy Customers</p>
-          </div>
-          <div className="bg-primary text-white p-8 rounded-lg">
-            <h2 className="text-3xl font-bold">100+</h2>
-            <p className="text-lg">Countries</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <div className="container flex justify-center">
@@ -252,10 +273,46 @@ function HomePage() {
     </div>
 
   
-
-
    </section>
 
+
+    <section className="testimonials flex justify-center mx-auto">
+      <div className="container">
+        <h2 className="text-4xl font-bold text-center text-primary mb-12 py-16">What our customers say about us?</h2>
+        <div className="flex flex-wrap gap-8">
+          <div className="bg-primary text-white rounded-lg overflow-hidden px-4 py-4 rounded-lg flex-1">
+            <img
+              src={Candidate}
+              alt="Candidate"
+              className="w-20 h-20 object-cover rounded-full"
+            />
+            <div className="px-4">
+              <hr className="my-4 border-white w-full" />
+              <p className="text-lg text-white">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              </p>
+              <h3 className="text-lg font-semibold text-white mt-4">John Doe</h3>
+              <p className="text-sm text-white">CEO, Company</p>
+            </div>
+          </div>
+          <div className="bg-primary text-white rounded-lg overflow-hidden px-4 py-4 rounded-lg flex-1">
+            <img
+              src={Art}
+              alt="Art"
+              className="w-20 h-20 object-cover rounded-full"
+            />
+            <div className="px-4">
+              <hr className="my-4 border-white w-full" />
+              <p className="text-lg text-white">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              </p>
+              <h3 className="text-lg font-semibold text-white mt-4">Jane Doe</h3>
+              <p className="text-sm text-white">Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 

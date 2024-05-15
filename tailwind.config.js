@@ -10,6 +10,10 @@ export default {
         primary: '#724634',
         accent: '#F7EBE7'
       },
+      fontFamily: {
+        //Anton
+        'count': ['"Anton"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
