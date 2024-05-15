@@ -5,6 +5,7 @@ import Candidate from "./assets/Candidate.png";
 import Art from "./assets/Art and design.png";
 import Rating from "./assets/Rating.png";
 import star from "./assets/Star.svg"
+import UpArrow from "./assets/UpArrow.svg"
 
   
 const features = [
@@ -78,7 +79,7 @@ function HomePage() {
 
           <button id="mobile-menu-btn" className="lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              <path  stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
         </div>
@@ -160,10 +161,10 @@ function HomePage() {
 </section>
 
 
-   <section className="AboutUs mx-auto container py-20">
+   <section className="AboutUs mx-auto container md:py-20 py-4">
 
-    <div className="container mx-auto py-16 px-16 bg-accent flex justify-center items-center flex-col">
-        <h1 className="text-4xl font-bold text-center text-primary mb-12 py-5">Why we started this?</h1>
+    <div className="container mx-auto md:py-16 md:px-16 px-4 py-2 bg-accent flex justify-center items-center flex-col">
+        <h1 className="text-4xl font-bold text-center text-primary md:mb-12 mb-2 md:py-5 py-2">Why we started this?</h1>
         <p className="text-center text-lg text-primary  w-10/12">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -179,12 +180,12 @@ function HomePage() {
 
    </section>
 
-<section className="aunty mx-auto">
+<section className="aunty mx-auto my-auto">
   <div
     className="container mx-auto flex flex-col lg:flex-row justify-center h-full bg-bottom bg-cover px-4 md:px-8 lg:px-16 pt-16"
     style={{ backgroundImage: "url('https://i.ibb.co/p1FmbG9/Women-Empowerment.jpg')" }}
   >
-    <div className="col w-full lg:w-1/2 mt-10 lg:mt-20">
+    <div className="col w-full lg:w-1/2 md:mt-10 mt-4 lg:mt-20">
       <h6 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-6 md:mb-8 lg:mb-12">
         Creating opportunities for rural women to <br />
         handcraft India’s growth.
@@ -286,121 +287,108 @@ function HomePage() {
    </section>
 
 
-    <section className="testimonials flex justify-center mx-auto h-[900px] bg-cover bg-bottom bg-no-repeat" style={{backgroundImage: "url('https://i.ibb.co/7nWhpb4/Frame-16.jpg')"}}>
-      <div className="container">
-        <h2 className="text-5xl font-bold text-center text-primary mb-12 py-1">What our customers say about us?</h2>
-        <div className="flex mx-auto px-14 py-20">
-
-        <div className="flex flex-wrap justify-between space-x-10">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-none border border-1 border-primary text-primary py-4 rounded-2xl shadow-lg flex flex-col items-center flex-1  h-[440px]">
-              <div className="flex items-center justify-between space-x-4 mb-4 w-full px-4">
-              <h3 className="text-lg ">{testimonial.name}</h3>
-              <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-[1px] border-white object-cover" />
-                
-              </div>
-
-            <div className="testimonial-text  h-[60%] border-x-0 border-y-2 border-primary flex text-center justify-center items-center text-white bg-primary opacity-[58%]">
-            <p className="text-lg w-[80%]">{testimonial.text}</p>
-            </div>
-
-              <div className="flex space-x-1 justify-start py-6 w-full px-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <img key={i} src={star} alt="star" className="w-[38px] h-[38px]" />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-  
-         
-        </div>
-      </div>
-    </section>
-
-
-
-<section className="contact mx-auto flex justify-center">
-<div className="conatiner bg-accent  text-center px-6 py-12 md:p-10">
-      <div className="mb-8">
-        <h2 className="text-4xl md:text-8xl font-bold text-primary mb-12 leading-12">
-          Ready to get <br /> Sophisticated
-        </h2>
-     
-        <div className="flex justify-center text-primary space-x-4 mt-4">
-        
-          <button className="bg-accent text-3xl border border-1 border-primary  py-4 px-6  text-start rounded-full item-bottom" style={{alignSelf: "end"}}>
-            Shop
-          </button>
-
-          <div className="emailgrp flex flex-col">
-          <input
-          type="email"
-          placeholder="Email"
-          className=" py-2 w-[100%] text-3xl border-b-2 border-primary placeholder:text-primary bg-transparent mb-8 w-full"
-        />
-         <button className="bg-accent text-3xl border border-1 border-primary  text-start px-6 py-4 rounded-full">
-            Newsletter
-          </button>
-
+   <section className="testimonials flex justify-center mx-auto h-auto md:h-[900px] bg-cover bg-bottom bg-no-repeat px-4" style={{ backgroundImage: "url('https://i.ibb.co/7nWhpb4/Frame-16.jpg')" }}>
+  <div className="container mx-auto py-16 md:py-20">
+    <h2 className="text-3xl md:text-5xl font-bold text-center text-primary mb-8 md:mb-12">What our customers say about us?</h2>
+    <div className="flex flex-wrap justify-center md:px-14 py-10 gap-8 md:gap-10">
+      {testimonials.map((testimonial, index) => (
+        <div key={index} className="bg-none border border-primary text-primary py-4 rounded-2xl shadow-lg flex flex-col items-center w-full md:w-1/3 lg:w-1/4 h-auto md:h-[440px]">
+          <div className="flex items-center justify-between space-x-4 mb-4 w-full px-4">
+            <h3 className="text-lg">{testimonial.name}</h3>
+            <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-[1px] border-white object-cover" />
           </div>
-         
+          <div className="testimonial-text h-auto md:h-[60%] border-x-0 border-y-2 border-primary flex text-center justify-center items-center text-white bg-primary opacity-60 px-4 py-6 md:py-0">
+            <p className="text-sm md:text-lg w-full md:w-[80%]">{testimonial.text}</p>
+          </div>
+          <div className="flex space-x-1 justify-start py-6 w-full px-4">
+            {Array.from({ length: testimonial.rating }).map((_, i) => (
+              <img key={i} src={star} alt="star" className="w-6 h-6 md:w-[38px] md:h-[38px]" />
+            ))}
+          </div>
         </div>
-      </div>
-
-      </div>
+      ))}
+    </div>
+  </div>
 </section>
 
-<section className="footer">
-<div className="border-t border-gray-300 py-6 text-start">
-      
-        <div className="container text-primary flex justify-center mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
-          <div>
-            <h3 className="font-semibold mb-2">Quick Links</h3>
-            <ul>
-              <li>All Products</li>
-              <li>Categories</li>
-              <li>Support</li>
-              <li>Shipping Policy</li>
-            </ul>
-          </div>
 
-          <div>
-            <h3 className="font-semibold mb-2">Information</h3>
-            <ul>
-              <li>FAQs</li>
-              <li>Policy</li>
-              <li>Terms & Conditions</li>
-              <li>Return & Exchange</li>
-            </ul>
-          </div>
 
-          <div>
-            <h3 className="font-semibold mb-2">Socials</h3>
-            <ul>
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>X</li>
-              <li>LinkedIn</li>
-            </ul>
-          </div>
 
-          <div style={{alignContent: "center"}}>
-          <img src="https://i.ibb.co/RD1BmW0/dori-brown.png" style={{width: "100px"}} alt="Dori" />
-          </div>
+<section className="contact mx-auto flex justify-center py-12 md:py-20">
+  <div className="container bg-accent text-center px-6 py-12 md:px-10 md:py-16">
+    <div className="mb-8">
+      <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-primary mb-8 md:mb-12 leading-tight md:leading-none">
+        Ready to get <br /> Sophisticated
+      </h2>
+     
+      <div className="flex flex-col md:flex-row justify-center items-center text-primary space-y-4 md:space-y-0 md:space-x-4 mt-4">
+        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end ">
+          Shop
+        </button>
+
+        <div className="emailgrp flex flex-col items-center md:items-start w-full md:w-auto">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full md:w-auto text-xl md:text-2xl lg:text-3xl border-b-2 border-primary placeholder:text-primary bg-transparent mb-4 md:mb-8 py-2 px-4"
+          />
+          <button className="bg-accent w-full text-start text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full mt-4 md:mt-0">
+            Newsletter
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section className="footer bg-accent">
+  <div className="border-t border-gray-300 py-12 px-10 text-start">
+    <div className="container text-primary mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20">
+        <div>
+          <h3 className="font-semibold mb-2">Quick Links</h3>
+          <ul>
+            <li>All Products</li>
+            <li>Categories</li>
+            <li>Support</li>
+            <li>Shipping Policy</li>
+          </ul>
         </div>
 
-      <div className="border-t border-gray-300 py-6 text-center flex justify-center mx-auto">
-      <div className="container flex justify-between px-8">
+        <div>
+          <h3 className="font-semibold mb-2">Information</h3>
+          <ul>
+            <li>FAQs</li>
+            <li>Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Return & Exchange</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-semibold mb-2">Socials</h3>
+          <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>X</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
+
+        <div className="flex justify-center lg:justify-start items-center">
+          <img src="https://i.ibb.co/RD1BmW0/dori-brown.png" className="w-20" alt="Dori" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="border-t border-gray-300 py-6 text-center">
+    <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
       <p>&copy; 2023 Kasturi Dori Pvt Ltd. All Rights Reserved.</p>
-        <button className="mt-4 text-brown-800">Back to Top ↑</button>
-      </div>
-      </div>
-
+      <button className="mt-4 md:mt-0 text-brown-800 flex text-lg items-center">Back to Top <span className="px-4"><img src={UpArrow} alt="" className="h-[3rem] w-[3rems]" /></span></button>
+    </div>
+  </div>
 </section>
 
 
