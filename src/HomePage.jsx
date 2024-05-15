@@ -224,7 +224,7 @@ function HomePage() {
               <img
                 src={feature.imageUrl}
                 alt={feature.title}
-                className="w-full h-48 object-cover rounded-xl"
+                className="w-full h-[200px] object-cover rounded-xl"
               />
               <div className="px-2 md:px-4">
                 <hr className="my-4 border-white w-full" />
