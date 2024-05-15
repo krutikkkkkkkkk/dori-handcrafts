@@ -276,48 +276,98 @@ function HomePage() {
    </section>
 
 
-    <section className="testimonials flex justify-center mx-auto">
+    <section className="testimonials flex justify-center mx-auto h-[900px] bg-cover bg-bottom bg-no-repeat" style={{backgroundImage: "url('https://i.ibb.co/7nWhpb4/Frame-16.jpg')"}}>
       <div className="container">
         <h2 className="text-4xl font-bold text-center text-primary mb-12 py-16">What our customers say about us?</h2>
         <div className="flex flex-wrap gap-8">
-          <div className="bg-primary text-white rounded-lg overflow-hidden px-4 py-4 rounded-lg flex-1">
-            <img
-              src={Candidate}
-              alt="Candidate"
-              className="w-20 h-20 object-cover rounded-full"
-            />
-            <div className="px-4">
-              <hr className="my-4 border-white w-full" />
-              <p className="text-lg text-white">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </p>
-              <h3 className="text-lg font-semibold text-white mt-4">John Doe</h3>
-              <p className="text-sm text-white">CEO, Company</p>
-            </div>
-          </div>
-          <div className="bg-primary text-white rounded-lg overflow-hidden px-4 py-4 rounded-lg flex-1">
-            <img
-              src={Art}
-              alt="Art"
-              className="w-20 h-20 object-cover rounded-full"
-            />
-            <div className="px-4">
-              <hr className="my-4 border-white w-full" />
-              <p className="text-lg text-white">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </p>
-              <h3 className="text-lg font-semibold text-white mt-4">Jane Doe</h3>
-              <p className="text-sm text-white">Designer</p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
 
 
 
+<section className="contact mx-auto flex justify-center">
+<div className="conatiner bg-accent  text-center p-6 md:p-10">
+      <div className="mb-8">
+        <h2 className="text-2xl md:text-6xl font-bold text-primary mb-4 leading-10">
+          Ready to get <br /> Sophisticated
+        </h2>
+     
+        <div className="flex justify-center text-primary space-x-4 mt-4">
+        
+          <button className="bg-accent border border-1 border-primary  py-2 px-6  text-start rounded-full item-bottom" style={{alignSelf: "end"}}>
+            Shop
+          </button>
 
+          <div className="emailgrp flex flex-col">
+          <input
+          type="email"
+          placeholder="Email"
+          className=" py-2 w-[100%] border-b-2 border-primary placeholder:text-primary bg-transparent mb-4 w-full"
+        />
+         <button className="bg-accent border border-1 border-primary  text-start px-6 py-2 rounded-full">
+            Newsletter
+          </button>
 
+          </div>
+         
+        </div>
+      </div>
+
+      </div>
+</section>
+
+<section className="footer">
+<div className="border-t border-gray-300 py-6 text-start">
+      
+        <div className="container text-primary flex justify-center mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
+          <div>
+            <h3 className="font-semibold mb-2">Quick Links</h3>
+            <ul>
+              <li>All Products</li>
+              <li>Categories</li>
+              <li>Support</li>
+              <li>Shipping Policy</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-2">Information</h3>
+            <ul>
+              <li>FAQs</li>
+              <li>Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Return & Exchange</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-2">Socials</h3>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>X</li>
+              <li>LinkedIn</li>
+            </ul>
+          </div>
+
+          <div style={{alignContent: "center"}}>
+          <img src="https://i.ibb.co/RD1BmW0/dori-brown.png" style={{width: "100px"}} alt="Dori" />
+          </div>
+        </div>
+      </div>
+        </div>
+
+      <div className="border-t border-gray-300 py-6 text-center flex justify-center mx-auto">
+      <div className="container flex justify-between px-8">
+      <p>&copy; 2023 Kasturi Dori Pvt Ltd. All Rights Reserved.</p>
+        <button className="mt-4 text-brown-800">Back to Top ↑</button>
+      </div>
+      </div>
+
+</section>
 
 
 
