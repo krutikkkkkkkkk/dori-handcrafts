@@ -6,6 +6,8 @@ import Art from "./assets/Art and design.png";
 import Rating from "./assets/Rating.png";
 import star from "./assets/Star.svg"
 import UpArrow from "./assets/UpArrow.svg"
+import sideArrow from "./assets/arrow-side-up.svg"
+import sideArrowB from "./assets/arrow-side-up-b.svg"
 
   
 const features = [
@@ -17,19 +19,19 @@ const features = [
   },
   {
     id: 2,
-    imageUrl: "https://i.ibb.co/GVrRTXS/Product.jpg",
+    imageUrl: "https://i.ibb.co/gZYzGMN/Handbag.jpg",
     title: "Hand Bags",
     description: "This is a description of feature 2.",
   },
   {
     id: 3,
-    imageUrl: "https://i.ibb.co/GVrRTXS/Product.jpg",
+    imageUrl: "https://i.ibb.co/891VZYq/Wall-Hanging.jpg",
     title: "Wall Hangings",
     description: "This is a description of feature 3.",
   },
   {
     id: 4,
-    imageUrl: "https://i.ibb.co/GVrRTXS/Product.jpg",
+    imageUrl: "https://i.ibb.co/VJrLg6q/Swing.jpg",
     title: "Swings",
     description: "This is a description of feature 4.",
   },
@@ -110,9 +112,9 @@ function HomePage() {
     </h1>
     <a
       href="#"
-      className="bg-primary px-8 py-3 rounded-full border border-white text-white font-semibold hover:bg-primary-dark my-10"
+      className="bg-primary px-8 py-3 rounded-full border border-white text-white font-semibold hover:bg-primary-dark my-10 flex items-center justify-center w-[max-content] mx-auto peer"
     >
-      View More
+     <span className="peer px-4">View More</span> <img src={sideArrow} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
     </a>
   </div>
 </section>
@@ -151,12 +153,12 @@ function HomePage() {
   </div>
 
   <div className="flex justify-center mt-10">
-    <a
-      href="#"
-      className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark"
-    >
-      View More
-    </a>
+  <a
+        href="#"
+        className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark my-10 w-[max-content] mx-auto flex items-center justify-center"
+      >
+     <span className="peer px-4">View more</span> <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
+      </a>
   </div>
 </section>
 
@@ -217,7 +219,7 @@ function HomePage() {
       
       <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
         <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
-          <img src={Rating} alt="Product Range" className="h-16 md:h-20" />
+          <img src={Art} alt="Product Range" className="h-16 md:h-20" />
           <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Product <br /> Range</p>
         </div>
         <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
@@ -225,7 +227,7 @@ function HomePage() {
       
       <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
         <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
-          <img src={Rating} alt="Women Employed" className="h-16 md:h-20" />
+          <img src={Candidate} alt="Women Employed" className="h-16 md:h-20" />
           <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Women <br /> Employed</p>
         </div>
         <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
@@ -274,9 +276,9 @@ function HomePage() {
     <div className="container flex justify-center">
       <a
         href="#"
-        className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark my-10"
+        className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark my-10 w-[max-content] mx-auto flex items-center justify-center"
       >
-        View all products
+     <span className="peer px-4">View all products</span> <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
       </a>
       </div>
 
@@ -322,8 +324,8 @@ function HomePage() {
       </h2>
      
       <div className="flex flex-col md:flex-row justify-center items-center text-primary space-y-4 md:space-y-0 md:space-x-4 mt-4">
-        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end ">
-          Shop
+        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end w-[max-content] w-full flex items-center">
+          <span className="peer px-4">Shop</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
         </button>
 
         <div className="emailgrp flex flex-col items-center md:items-start w-full md:w-auto">
@@ -332,8 +334,8 @@ function HomePage() {
             placeholder="Email"
             className="w-full md:w-auto text-xl md:text-2xl lg:text-3xl border-b-2 border-primary placeholder:text-primary bg-transparent mb-4 md:mb-8 py-2 px-4"
           />
-          <button className="bg-accent w-full text-start text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full mt-4 md:mt-0">
-            Newsletter
+          <button className="bg-accent w-full text-start text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full mt-4 md:mt-0 w-[max-content] flex items-center justify-between">
+            <span className="peer">Newsletter</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
           </button>
         </div>
       </div>
