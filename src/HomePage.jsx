@@ -324,8 +324,8 @@ function HomePage() {
       </h2>
      
       <div className="flex flex-col md:flex-row justify-center items-center text-primary space-y-4 md:space-y-0 md:space-x-4 mt-4">
-        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end w-[max-content]">
-          <span className="peer">Shop</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
+        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end w-[max-content] w-full flex items-center">
+          <span className="peer ">Shop</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
         </button>
 
         <div className="emailgrp flex flex-col items-center md:items-start w-full md:w-auto">
@@ -334,7 +334,7 @@ function HomePage() {
             placeholder="Email"
             className="w-full md:w-auto text-xl md:text-2xl lg:text-3xl border-b-2 border-primary placeholder:text-primary bg-transparent mb-4 md:mb-8 py-2 px-4"
           />
-          <button className="bg-accent w-full text-start text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full mt-4 md:mt-0 w-[max-content]">
+          <button className="bg-accent w-full text-start text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full mt-4 md:mt-0 w-[max-content] flex items-center justify-between">
             <span className="peer">Newsletter</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
           </button>
         </div>
