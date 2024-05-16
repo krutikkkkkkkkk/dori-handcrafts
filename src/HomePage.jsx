@@ -259,7 +259,7 @@ function HomePage() {
                   <h3 className="text-sm md:text-base font-semibold">{feature.title}</h3>
                   <a
                     href="#"
-                    className="bg-primary text-white rounded-lg hover:bg-primary-dark"
+                    className="bg-primary text-white rounded-lg hover:bg-primary-dark transform transition-transform duration-300 hover:rotate-45"
                   >
                     <img src={Arrow} alt="Arrow" style={{ width: "25px" }} />
                   </a>
@@ -324,8 +324,8 @@ function HomePage() {
       </h2>
      
       <div className="flex flex-col md:flex-row justify-center items-center text-primary space-y-4 md:space-y-0 md:space-x-4 mt-4">
-        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end w-[max-content] w-full flex items-center">
-          <span className="peer ">Shop</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
+        <button className="bg-accent text-2xl md:text-3xl border border-primary py-4 px-6 rounded-full md:self-end w-[max-content] flex items-center">
+          <span className="peer px-4">Shop</span>  <img src={sideArrowB} alt="" className="h-[1rem] w-[1rem]   transform transition-transform duration-300 peer-hover:rotate-45" />
         </button>
 
         <div className="emailgrp flex flex-col items-center md:items-start w-full md:w-auto">
@@ -392,17 +392,6 @@ function HomePage() {
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
