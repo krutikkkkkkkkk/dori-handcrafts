@@ -1,16 +1,13 @@
 import "./index.css";
 import Arrow from "./assets/arrow.svg";
 import Rating from "./assets/Rating.png";
-<<<<<<< HEAD
 import star from "./assets/Star.svg"
 import UpArrow from "./assets/UpArrow.svg"
 import sideArrow from "./assets/arrow-side-up.svg"
 import sideArrowB from "./assets/arrow-side-up-b.svg"
-=======
 import star from "./assets/Star.svg";
 import UpArrow from "./assets/UpArrow.svg";
 import { useState } from "react";
->>>>>>> 6b6f2c39be6335347b18eb38d125c957baa8e504
 
 const features = [
   {
