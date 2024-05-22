@@ -125,7 +125,7 @@ function HomePage() {
 
 
     <section className="container mx-auto py-16 bg-accent">
-  <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Peek into our bestsellers!</h2>
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12 px-4">Peek into our bestsellers!</h2>
  <div className="border-t-2 border-b-2 border-primary my-10">
       <div className="container px-4 md:px-10 lg:px-20">
         <div className="grid grid-cols-2 md:gap-16 gap-4 my-10">
