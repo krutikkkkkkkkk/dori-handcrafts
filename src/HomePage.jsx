@@ -8,6 +8,7 @@ import star from "./assets/Star.svg"
 import UpArrow from "./assets/UpArrow.svg"
 import sideArrow from "./assets/arrow-side-up.svg"
 import sideArrowB from "./assets/arrow-side-up-b.svg"
+import StatsSection from './StatsSection.jsx'
 
   
 const features = [
@@ -125,7 +126,7 @@ function HomePage() {
 
     <section className="container mx-auto py-16 bg-accent">
   <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Peek into our bestsellers!</h2>
-  <div className="border-t-2 border-b-2 border-primary my-10">
+ <div className="border-t-2 border-b-2 border-primary my-10">
       <div className="container px-4 md:px-10 lg:px-20">
         <div className="grid grid-cols-2 md:gap-16 gap-4 my-10">
           {features.map((feature) => (
@@ -136,7 +137,7 @@ function HomePage() {
               <img
                 src={feature.imageUrl}
                 alt={feature.title}
-                className="w-full md:h-[200px] h-[150px] object-cover rounded-xl"
+                className="w-full h-[150px] md:h-[500px] aspect-square object-cover rounded-xl"
               />
               <div className="px-2 md:px-4 w-full">
                 <hr className="my-4 border-white w-full" />
@@ -211,35 +212,7 @@ function HomePage() {
 </section>
 
 
-<section className="stats bg-primary px-10 py-14 flex justify-center">
-  <div className="container">
-    <div className="flex items-center justify-center flex-wrap gap-8 text-center">
-      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
-        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
-          <img src={Rating} alt="Happy Customers" className="h-16 md:h-20" />
-          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Happy <br /> Customers</p>
-        </div>
-        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
-      </div>
-      
-      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
-        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
-          <img src={Art} alt="Product Range" className="h-16 md:h-20" />
-          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Product <br /> Range</p>
-        </div>
-        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
-      </div>
-      
-      <div className="border-2 border-white text-white p-6 rounded-2xl flex justify-between items-center flex-1">
-        <div className="grp flex space-x-4 md:space-x-8 items-center justify-center">
-          <img src={Candidate} alt="Women Employed" className="h-16 md:h-20" />
-          <p className="text-lg md:text-[26px] text-start leading-6 md:leading-8">Women <br /> Employed</p>
-        </div>
-        <h2 className="text-3xl md:text-[3rem] font-bold font-count">100+</h2>   
-      </div>
-    </div>
-  </div>
-</section>
+<StatsSection/>
 
 
 
@@ -257,7 +230,7 @@ function HomePage() {
               <img
                 src={feature.imageUrl}
                 alt={feature.title}
-                className="w-full md:h-[200px] h-[150px] object-cover rounded-xl"
+                className="w-full h-[150px] md:h-[500px] aspect-square object-cover rounded-xl"
               />
               <div className="px-2 md:px-4 w-full">
                 <hr className="my-4 border-white w-full" />
