@@ -237,7 +237,7 @@ function HomePage() {
 </section>
 
 
-<section className="bestsellers">
+{/* <section className="bestsellers">
   <div className="container mx-auto py-16">
     <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Bestsellers</h2>
     <div className="border-t-2 border-b-2 border-primary my-10">
@@ -286,7 +286,54 @@ function HomePage() {
     </div>
 
   
-   </section>
+   </section> */}
+
+   <section className="bestsellers">
+  <div className="container mx-auto py-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Bestsellers</h2>
+    <div className="border-t-2 border-b-2 border-primary my-10">
+      <div className="container px-4 md:px-10 lg:px-20">
+        <div className="grid grid-cols-2 md:gap-16 gap-4 my-10">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="bg-primary rounded-lg overflow-hidden text-white p-4 md:p-6 flex flex-col items-center"
+            >
+              <img
+                src={feature.imageUrl}
+                alt={feature.title}
+                className="w-full md:h-[200px] h-[150px] object-cover rounded-xl"
+              />
+              <div className="px-2 md:px-4 w-full">
+                <hr className="my-4 border-white w-full" />
+                <div className="flex justify-between items-center py-2">
+                  <h3 className="text-sm md:text-base font-semibold">{feature.title}</h3>
+                  <a
+                    href="#"
+                    className="bg-primary text-white rounded-lg hover:bg-primary-dark transform transition-transform duration-300 hover:rotate-45"
+                  >
+                    <img src={Arrow} alt="Arrow" className="w-6" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div className="container flex justify-center">
+      <a
+        href="#"
+        className="bg-accent px-8 py-3 rounded-full border border-primary text-primary font-semibold hover:bg-primary-dark my-10 w-max flex items-center justify-center"
+      >
+        <span className="peer px-4">View all products</span>
+        <img src={sideArrowB} alt="" className="h-4 w-4 transform transition-transform duration-300 peer-hover:rotate-45" />
+      </a>
+    </div>
+  </div>
+</section>
+
 
 
    <section className="testimonials flex justify-center mx-auto h-auto md:h-[900px] bg-cover bg-bottom bg-no-repeat px-4" style={{ backgroundImage: "url('https://i.ibb.co/7nWhpb4/Frame-16.jpg')" }}>
